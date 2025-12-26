@@ -424,3 +424,5 @@ Eğer Gemini'den görsel aldıysan ve watermark varsa:
 
 
 
+
+

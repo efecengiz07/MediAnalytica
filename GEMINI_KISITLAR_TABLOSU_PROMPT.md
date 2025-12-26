@@ -214,3 +214,5 @@ Renk kodlaması: Yüksek (Kırmızı), Orta (Sarı), Düşük (Yeşil).
 
 
 
+
+

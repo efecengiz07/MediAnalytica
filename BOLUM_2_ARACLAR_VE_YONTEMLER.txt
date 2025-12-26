@@ -1,0 +1,260 @@
+BÖLÜM 2: ARAÇLAR VE YÖNTEMLER
+
+2.1. Melih Kızmaz'ın Katkıları
+
+2.1.1. Görev Tanımı ve Kapsam
+
+Melih Kızmaz, projede yapay zeka modeli eğitimi ve optimizasyonu sorumluluğunu üstlenmiştir. Derin öğrenme modellerinin geliştirilmesi, model mimarisi tasarımı, veri ön işleme ve veri artırma tekniklerinin uygulanması, model değerlendirme ve performans metriklerinin hesaplanması, Grad-CAM görselleştirme tekniğinin implementasyonu bu görev kapsamındadır. Üç farklı hastalık kategorisi için deri, kemik, akciğer sınıflandırma modellerinin eğitilmesi ve optimizasyonu gerçekleştirilmiştir.
+
+2.1.2. Tasarım
+
+Model mimarisi tasarımında, transfer learning yaklaşımı benimsenmiştir. Deri hastalıkları modeli için EfficientNetB3 mimarisi, kemik hastalıkları modeli için DenseNet-121 mimarisi seçilmiştir. Tüm modeller, ImageNet üzerinde önceden eğitilmiş ağırlıklar kullanılarak fine-tuning ile geliştirilmiştir. Veri ön işleme tasarımında, görüntü boyutlandırma, normalizasyon ve veri artırma teknikleri rotation, flip, zoom uygulanmıştır. Model eğitim sürecinde early stopping ve model checkpointing teknikleri ile overfitting önlenmiştir.
+
+2.1.3. Kullanılan Teknolojiler
+
+TensorFlow ve Keras kütüphaneleri, derin öğrenme modellerinin geliştirilmesi ve eğitilmesi için kullanılmıştır. EfficientNet mimarisi, deri hastalıkları modeli için tercih edilmiştir. DenseNet mimarisi, kemik hastalıkları modeli için kullanılmıştır. Transfer learning ve fine-tuning teknikleri, model geliştirme sürecinde uygulanmıştır. Grad-CAM Gradient-weighted Class Activation Mapping tekniği, model kararlarının görselleştirilmesi için kullanılmıştır. GPU desteği, model eğitimi sürecinde Google Colab veya yerel GPU ile sağlanmıştır.
+
+2.1.4. Algoritmalar
+
+Model eğitim algoritması, transfer learning prensibine dayanmaktadır. Önceden eğitilmiş katmanlar dondurulmuş, sadece son sınıflandırma katmanları ve birkaç üst katman fine-tuning ile eğitilmiştir. Veri artırma algoritması, eğitim sırasında görüntülere rotation, horizontal flip, zoom ve brightness adjustment dönüşümleri uygular. Early stopping algoritması, validation loss'un belirli bir epoch sayısı boyunca iyileşmemesi durumunda eğitimi durdurur. Model değerlendirme algoritması, accuracy, precision, recall ve F1 score metriklerini hesaplar. Grad-CAM algoritması, modelin görüntünün hangi bölgelerine odaklandığını heatmap olarak görselleştirir.
+
+2.2. Efe Cengiz Köse'nin Katkıları
+
+2.2.1. Görev Tanımı ve Kapsam
+
+Efe Cengiz Köse, projede sistem mimarisi tasarımı ve implementasyonu, backend API geliştirme, Firebase ekosistemi entegrasyonu, Jitsi Meet görüntülü görüşme sistemi entegrasyonu, profil ve kullanıcı yönetimi sistemleri, güvenlik implementasyonu ve veritabanı şema tasarımı sorumluluklarını üstlenmiştir. Flask web framework'ü kullanılarak RESTful API servisleri geliştirilmiş, Firebase Authentication, Firestore ve Storage entegrasyonu gerçekleştirilmiştir.
+
+2.2.2. Tasarım
+
+Sistem mimarisi, üç katmanlı three-tier yapı olarak tasarlanmıştır. Sunum katmanı frontend, uygulama katmanı backend API ve veri katmanı Firebase ekosistemi olarak ayrılmıştır. Veritabanı şema tasarımında, Firestore koleksiyonları users, analyses, favorites, shared_analyses, appointments olarak yapılandırılmıştır. API endpoint tasarımı, RESTful prensiplere göre mantıksal gruplara ayrılmıştır. Güvenlik mimarisi, token doğrulama, rate limiting, CORS yapılandırması ve input validation ile tasarlanmıştır. Jitsi Meet entegrasyonu, her randevu için benzersiz room ID oluşturma ve iframe embed yöntemi ile tasarlanmıştır.
+
+2.2.3. Kullanılan Teknolojiler
+
+Python 3.11+ programlama dili, backend geliştirme için kullanılmıştır. Flask web framework'ü, RESTful API servislerinin geliştirilmesi için tercih edilmiştir. Firebase Admin SDK, backend tarafında Firebase işlemleri için kullanılmıştır. Firebase Authentication, kullanıcı kimlik doğrulama için kullanılmıştır. Firebase Firestore, NoSQL veritabanı olarak kullanılmıştır. Firebase Storage, görüntü dosyalarının depolanması için kullanılmıştır. Jitsi Meet API, görüntülü görüşme özelliği için entegre edilmiştir. Flask-CORS, Cross-Origin Resource Sharing yapılandırması için kullanılmıştır. Flask-Limiter, rate limiting ve DDoS koruması için kullanılmıştır. Flask-Caching, API yanıtlarını önbelleğe almak için kullanılmıştır.
+
+2.2.4. Algoritmalar
+
+Token doğrulama algoritması, Firebase Authentication'dan gelen JWT ID token'ları doğrular ve kullanıcı kimliğini çıkarır. Rate limiting algoritması, her IP adresi için günde 200 istek ve saatte 50 istek limiti koyar. Caching stratejisi, kullanıcı istatistikleri gibi sık sorgulanan verileri 5 dakika süreyle önbelleğe alır. Veri pagination algoritması, Firestore sorgularında limit ve offset kullanarak sayfalama sağlar. Jitsi Meet room ID oluşturma algoritması, UUID v4 kullanarak benzersiz room ID'leri generate eder. Input validation algoritması, tüm API endpoint'lerinde gelen verileri doğrular ve geçersiz verileri reddeder.
+
+2.3. Dilara Aydın'ın Katkıları
+
+2.3.1. Görev Tanımı ve Kapsam
+
+Dilara Aydın, projede frontend geliştirme, kullanıcı arayüzü tasarımı, responsive tasarım implementasyonu, kullanıcı deneyimi UX optimizasyonu, Firebase JavaScript SDK entegrasyonu ve frontend-backend entegrasyonu sorumluluklarını üstlenmiştir. HTML5, CSS3 ve JavaScript ES6+ teknolojileri kullanılarak responsive ve kullanıcı dostu bir web arayüzü geliştirilmiştir. Dark mode implementasyonu ve mobil cihazlar için optimize edilmiş tasarım gerçekleştirilmiştir.
+
+2.3.2. Tasarım
+
+UI/UX tasarımı, modern ve kullanıcı dostu bir arayüz oluşturmak için tasarlanmıştır. Responsive tasarım, mobile-first yaklaşımı benimsenerek CSS media queries ile uygulanmıştır. Touch target'lar minimum 44x44px olarak ayarlanmıştır. Dark mode tasarımı, CSS variables ve JavaScript ile uygulanmıştır. Kullanıcı arayüzü bileşenleri, hero section, analiz kartı, istatistikler kartı ve geçmiş kartı olarak tasarlanmıştır. Sidebar, mobil cihazlarda drawer pattern olarak çalışmaktadır. Görüntü yükleme alanı, drag and drop özelliği ile tasarlanmıştır.
+
+2.3.3. Kullanılan Teknolojiler
+
+HTML5 ve semantik yapı, erişilebilir ve anlamlı bir yapı oluşturmak için kullanılmıştır. CSS3 ve modern stil teknikleri, flexbox, grid ve custom properties ile uygulanmıştır. JavaScript ES6+ ve ES Modules, modüler kod yapısı sağlamak için kullanılmıştır. Bootstrap 4 framework'ü, responsive tasarım ve UI bileşenleri için kullanılmıştır. Font Awesome, ikon kütüphanesi olarak kullanılmıştır. Firebase JavaScript SDK, frontend'de Authentication, Firestore ve Storage işlemleri için kullanılmıştır. TensorFlow.js, model yükleme işlemleri için kullanılmıştır.
+
+2.3.4. Algoritmalar
+
+Frontend state management algoritması, kullanıcı oturum durumunu ve analiz sonuçlarını yönetir. Görüntü yükleme ve ön işleme algoritması, kullanıcıdan gelen görüntüyü alır, formatını kontrol eder, boyutunu optimize eder ve backend'e gönderir. API çağrı yönetimi algoritması, async/await pattern kullanarak API isteklerini yönetir ve hata durumlarını handle eder. Responsive layout algoritması, CSS media queries ile farklı ekran boyutlarına göre layout'u düzenler. Dark mode toggle algoritması, kullanıcı tercihini localStorage'da saklar ve sayfa yüklendiğinde uygular. Grad-CAM görselleştirme algoritması, backend'den gelen heatmap verisini alır ve görüntü üzerinde overlay olarak gösterir.
+
+2.4. Sistem Mimarisi
+
+2.4.1. Genel Mimari Tasarım
+
+Platform, üç katmanlı three-tier mimari yapısı kullanılarak tasarlanmıştır. Sunum katmanı Presentation Layer, kullanıcı arayüzünü ve istemci tarafı işlemlerini içermektedir. Uygulama katmanı Application Layer, Flask web framework'ü ile RESTful API servislerini barındırmaktadır. Veri katmanı Data Layer, Firebase Firestore, Storage ve Authentication servislerini içermektedir. Bu yaklaşım, sistemin bakımını kolaylaştırmakta, ölçeklenebilirliği artırmakta ve her katmanın bağımsız olarak geliştirilmesine olanak sağlamaktadır.
+
+BURAYA ŞEKİL 2.1: SİSTEM GENEL MİMARİ DİYAGRAMI EKLENECEK
+
+2.4.2. Katmanlı Mimari Yapısı
+
+Katmanlı mimari yapısı, separation of concerns, statelessness ve loose coupling prensiplerine göre tasarlanmıştır. Sunum katmanı, HTML5, CSS3 ve JavaScript ES6+ teknolojileri ile responsive web arayüzü sağlamaktadır. Uygulama katmanı, Flask ile RESTful API endpoint'leri ve iş mantığını barındırmaktadır. Veri katmanı, Firebase ekosistemi ile veritabanı, depolama ve kimlik doğrulama işlemlerini yönetmektedir. Katmanlar arası iletişim, HTTP/HTTPS protokolü ve JSON formatı ile gerçekleştirilmektedir.
+
+BURAYA ŞEKİL 2.2: KATMANLI MİMARİ YAPISI DİYAGRAMI EKLENECEK
+
+2.4.3. Veri Akışı ve İletişim Protokolleri
+
+Kullanıcı kayıt ve giriş akışında, frontend Firebase Authentication JavaScript SDK kullanarak Firebase'e istek gönderir ve ID token alır. Görüntü analizi akışında, frontend görüntüyü backend API'ye gönderir, backend model ile analiz eder ve sonuçları JSON formatında döndürür. Analiz geçmişi akışında, frontend backend API'ye GET isteği gönderir, backend Firestore'dan verileri sorgular ve JSON formatında döndürür. Platformda HTTP/HTTPS, REST, JSON ve WebSocket Jitsi Meet için protokolleri kullanılmaktadır.
+
+BURAYA ŞEKİL 2.3: VERİ AKIŞI DİYAGRAMI EKLENECEK
+
+2.5. Backend Teknolojileri
+
+2.5.1. Python Programlama Dili
+
+Python 3.11+, backend geliştirme için seçilmiştir. Python'ın derin öğrenme desteği, kolay öğrenilebilirliği, zengin kütüphane ekosistemi ve topluluk desteği seçilme nedenleridir. Projede flask, firebase-admin, tensorflow, pillow ve numpy kütüphaneleri kullanılmıştır.
+
+2.5.2. Flask Web Framework
+
+Flask, hafiflik, esneklik ve RESTful API geliştirme uygunluğu nedeniyle seçilmiştir. Flask uygulaması, @app.route decorator'ı ile route'lar tanımlanarak geliştirilmiştir. Her endpoint, belirli bir işlevi yerine getirmekte ve JSON formatında yanıt döndürmektedir.
+
+2.5.3. Flask-CORS (Cross-Origin Resource Sharing)
+
+Flask-CORS, farklı origin'lerden gelen isteklerin yönetilmesi için kullanılmıştır. CORS yapılandırması, sadece belirtilen origin'lerden gelen isteklerin kabul edilmesini sağlamaktadır. Bu yaklaşım, güvenlik açısından önemlidir.
+
+2.5.4. Flask-Limiter (Rate Limiting)
+
+Flask-Limiter, DDoS saldırılarını önlemek ve sunucu kaynaklarını korumak için kullanılmıştır. Varsayılan limitler, günde 200 istek ve saatte 50 istektir. Belirli endpoint'ler için özel limitler tanımlanmıştır. Rate limit aşıldığında, 429 HTTP status kodu döndürülmektedir.
+
+2.5.5. Flask-Caching (API Response Caching)
+
+Flask-Caching, API yanıtlarını önbelleğe almak için kullanılmıştır. Basit in-memory cache kullanılmakta ve cache timeout'u 5 dakika olarak ayarlanmıştır. @cache.cached decorator'ı ile belirli endpoint'lerde cache uygulanmaktadır.
+
+2.5.6. Flask-Swagger-UI (API Dokümantasyonu)
+
+Flask-Swagger-UI, interaktif API dokümantasyonu arayüzü sağlamaktadır. Swagger UI arayüzü, /api/docs URL'sinde erişilebilir hale getirilmiştir. API dokümantasyonu, /api/swagger.json endpoint'inden JSON formatında sağlanmaktadır.
+
+2.6. Veritabanı ve Depolama Sistemleri
+
+2.6.1. Firebase Firestore (NoSQL Veritabanı)
+
+Firebase Firestore, gerçek zamanlı sinkronizasyon, otomatik ölçeklenebilirlik ve güvenlik kuralları nedeniyle seçilmiştir. Firestore, Firebase Admin SDK ile başlatılmış ve koleksiyonlar üzerinde veri yazma ve okuma işlemleri gerçekleştirilmektedir.
+
+2.6.2. Firebase Storage (Dosya Depolama)
+
+Firebase Storage, görüntü dosyalarının ve profil fotoğraflarının depolanması için kullanılmıştır. Firebase Storage, otomatik ölçeklenebilir yapıya sahiptir ve Google Cloud CDN ile entegre çalışmaktadır. Dosya yükleme işlemleri, frontend tarafında Firebase JavaScript SDK kullanılarak gerçekleştirilmektedir.
+
+2.6.3. Veritabanı Şema Tasarımı
+
+Firestore'da kullanılan koleksiyonlar şunlardır: users kullanıcı bilgileri, analyses analiz geçmişi, favorites favori analizler, shared_analyses paylaşılan analizler, appointments randevular. Her koleksiyon, belirli alanlar ve veri tipleri ile yapılandırılmıştır.
+
+BURAYA TABLO 2.1: VERİTABANI ŞEMA YAPISI TABLOSU EKLENECEK
+
+2.6.4. Veri İlişkileri ve Index Yapıları
+
+Firestore, NoSQL veritabanı olduğu için referanslar string ID'ler kullanılarak yönetilmektedir. Composite index'ler, birden fazla alan üzerinde sıralama veya filtreleme yapılan sorgularda kullanılmaktadır. Index'ler, Firebase Console üzerinden veya firestore.indexes.json dosyası ile tanımlanabilir.
+
+BURAYA ŞEKİL 2.4: VERİ İLİŞKİLERİ DİYAGRAMI EKLENECEK
+
+2.7. Kimlik Doğrulama ve Güvenlik
+
+2.7.1. Firebase Authentication
+
+Firebase Authentication, email/password authentication yöntemi ile kullanıcı kimlik doğrulama için kullanılmıştır. Frontend tarafında Firebase JavaScript SDK, backend tarafında Firebase Admin SDK kullanılmaktadır. Kayıt sonrası email doğrulama zorunludur.
+
+2.7.2. JWT (JSON Web Token) Token Doğrulama
+
+Firebase Authentication, JWT tabanlı ID token'lar kullanmaktadır. Token'lar, Firebase tarafından imzalanmakta ve backend'de auth.verify_id_token fonksiyonu ile doğrulanmaktadır. Token doğrulama, tüm korumalı API endpoint'lerinde uygulanmaktadır.
+
+2.7.3. Email Doğrulama Sistemi
+
+Email doğrulama, yeni kayıt olan kullanıcılar için zorunludur. Kayıt sonrası sendEmailVerification fonksiyonu ile doğrulama e-postası gönderilmektedir. Email doğrulanmamış kullanıcılar, platforma erişimde uyarı mesajı görmektedir.
+
+2.7.4. Şifre Sıfırlama Mekanizması
+
+Şifre sıfırlama, sendPasswordResetEmail fonksiyonu ile gerçekleştirilmektedir. Kullanıcı, login sayfasındaki Şifremi Unuttum linki üzerinden şifre sıfırlama e-postası talep edebilmektedir.
+
+2.7.5. Rate Limiting ve DDoS Koruması
+
+Flask-Limiter kullanılarak rate limiting uygulanmaktadır. Varsayılan limitler, günde 200 istek ve saatte 50 istektir. Endpoint bazında özel limitler tanımlanmıştır. Rate limit aşıldığında, 429 HTTP status kodu döndürülmektedir.
+
+2.7.6. Input Validation ve Güvenlik Önlemleri
+
+Input validation, utils/validators.py modülünde merkezi olarak yönetilmektedir. Hastalık türü, analiz sonuçları ve pagination parametreleri doğrulanmaktadır. CORS yapılandırması ile sadece izin verilen origin'lerden gelen istekler kabul edilmektedir.
+
+2.8. Yapay Zeka ve Derin Öğrenme
+
+2.8.1. TensorFlow ve Keras Kütüphaneleri
+
+TensorFlow ve Keras, derin öğrenme modellerinin geliştirilmesi ve eğitilmesi için kullanılmıştır. TensorFlow 2.x sürümü, Keras API'sini içermekte ve model geliştirmeyi kolaylaştırmaktadır.
+
+2.8.2. EfficientNet Mimarisi
+
+EfficientNet, deri hastalıkları modeli için kullanılmıştır. EfficientNetB3 varyantı tercih edilmiş ve 5 sınıflı sınıflandırma akiec, bcc, bkl, mel, nv için fine-tuning yapılmıştır. EfficientNet, parametre verimliliği ve doğruluk dengesi sağlamaktadır.
+
+2.8.3. DenseNet Mimarisi
+
+DenseNet-121, kemik hastalıkları modeli için kullanılmıştır. DenseNet, yoğun bağlantılar dense connections kullanarak bilgi akışını optimize etmektedir. 4 sınıflı sınıflandırma Normal, Fracture, Benign_Tumor, Malignant_Tumor için eğitilmiştir.
+
+2.8.4. Transfer Learning ve Fine-Tuning
+
+Tüm modeller, ImageNet üzerinde önceden eğitilmiş ağırlıklar kullanılarak transfer learning ile geliştirilmiştir. Önceden eğitilmiş katmanlar dondurulmuş, sadece son sınıflandırma katmanları ve birkaç üst katman fine-tuning ile eğitilmiştir.
+
+2.8.5. Model Eğitim Süreci
+
+Model eğitimi, GPU desteği ile gerçekleştirilmiştir. Veri artırma teknikleri rotation, flip, zoom kullanılmıştır. Early stopping ve model checkpointing ile overfitting önlenmiştir. Model değerlendirme, test veri seti üzerinde accuracy, precision, recall ve F1 score metrikleri ile yapılmıştır.
+
+2.8.6. Görüntü Ön İşleme (Preprocessing)
+
+Görüntüler, model mimarisine göre ön işleme tabi tutulmaktadır. EfficientNet için efficientnet_preprocess_input, DenseNet için densenet_preprocess_input fonksiyonları kullanılmaktadır. Görüntüler, model gereksinimlerine göre boyutlandırılmaktadır 384x384, 224x224.
+
+2.8.7. Grad-CAM (Gradient-weighted Class Activation Mapping)
+
+Grad-CAM, model kararlarının görselleştirilmesi için kullanılmaktadır. Bu teknik, modelin görüntünün hangi bölgelerine odaklandığını heatmap olarak göstermektedir. Backend'de hesaplanan heatmap, frontend'e base64 formatında gönderilmektedir.
+
+2.9. Frontend Teknolojileri
+
+2.9.1. HTML5 ve Semantik Yapı
+
+HTML5 semantik elementleri header, nav, main, section, article kullanılarak erişilebilir ve anlamlı bir yapı oluşturulmuştur. Bu yaklaşım, SEO ve screen reader uyumluluğunu artırmaktadır.
+
+2.9.2. CSS3 ve Modern Stil Teknikleri
+
+CSS3 özellikleri flexbox, grid, custom properties kullanılmıştır. CSS variables ile merkezi bir tasarım sistemi oluşturulmuştur. Custom properties, renkler, spacing ve shadow değerlerini merkezi olarak yönetmektedir.
+
+2.9.3. JavaScript ES6+ ve ES Modules
+
+Modern JavaScript özellikleri arrow functions, async/await, destructuring kullanılmıştır. ES Modules type="module" ile modüler kod yapısı sağlanmıştır. Import ve export ifadeleri ile kod organizasyonu gerçekleştirilmiştir.
+
+2.9.4. Firebase JavaScript SDK
+
+Firebase JavaScript SDK, frontend'de Authentication, Firestore ve Storage işlemleri için kullanılmaktadır. SDK, CDN üzerinden yüklenmekte ve ES Modules ile import edilmektedir. Kullanıcı kayıt, giriş ve veri işlemleri SDK üzerinden gerçekleştirilmektedir.
+
+2.9.5. Responsive Tasarım ve Mobile-First Yaklaşım
+
+Mobile-first yaklaşım benimsenmiş, CSS media queries ile responsive tasarım uygulanmıştır. Touch target'lar minimum 44x44px olarak ayarlanmıştır. Sidebar, mobil cihazlarda drawer pattern olarak çalışmaktadır.
+
+2.9.6. Dark Mode Implementasyonu
+
+Dark mode, CSS variables ve JavaScript ile uygulanmıştır. Kullanıcı tercihi localStorage'da saklanmakta ve sayfa yüklendiğinde uygulanmaktadır. Toggle butonu ile kullanıcı dark mode'u açıp kapatabilmektedir.
+
+2.10. API Tasarımı ve RESTful Mimarisi
+
+2.10.1. RESTful API Prensipleri
+
+API, REST prensiplerine göre tasarlanmıştır. Kaynaklar URL'ler ile temsil edilir /api/user/analyses. HTTP metodları işlemleri belirtir GET, POST, PUT, DELETE. Stateless yapı: Her istek bağımsızdır.
+
+2.10.2. Endpoint Yapısı ve HTTP Metodları
+
+Endpoint'ler, mantıksal gruplara ayrılmıştır. /auth/* kimlik doğrulama POST, /api/user/* kullanıcı verileri GET, POST, PUT, DELETE, /api/share/* paylaşım işlemleri GET, POST.
+
+2.10.3. Request/Response Formatları
+
+Tüm istekler ve yanıtlar JSON formatındadır. Standart response yapısı: success boolean, data object, error string, error_code string. Hata durumlarında tutarlı format sağlanmaktadır.
+
+2.10.4. Hata Yönetimi ve HTTP Status Kodları
+
+HTTP status kodları standartlara uygun kullanılmaktadır. 200 başarılı, 400 geçersiz istek, 401 yetkisiz erişim, 404 bulunamadı, 429 rate limit aşıldı, 500 sunucu hatası. Hata mesajları kullanıcı dostu formatta döndürülmektedir.
+
+2.10.5. Pagination ve Cursor-Based Sorgulama
+
+Pagination, page ve per_page parametreleri ile yönetilmektedir. Firestore sorgularında limit ve offset kullanılmaktadır. Cursor-based pagination gelecekte implement edilebilir.
+
+2.11. Video Konferans Entegrasyonu
+
+2.11.1. Jitsi Meet API
+
+Jitsi Meet, açık kaynak video konferans platformu olarak entegre edilmiştir. Jitsi Meet API, iframe embed yöntemi ile kullanılmaktadır. Kullanıcılar, iframe içinde görüntülü görüşme yapabilmektedir.
+
+2.11.2. Room ID Oluşturma ve Yönetimi
+
+Her randevu için benzersiz Jitsi Meet room ID'si oluşturulmaktadır. Room ID, randevu oluşturulurken uuid.uuid4 ile generate edilmekte ve Firestore'da saklanmaktadır. Her room ID, sadece ilgili randevu için geçerlidir.
+
+2.11.3. Görüntülü Görüşme Akışı
+
+Kullanıcı, onaylanmış randevular için Görüntülü Görüşmeye Katıl butonuna tıkladığında, appointment.html sayfasına yönlendirilmektedir. Bu sayfa, Jitsi Meet iframe'ini yüklemekte ve kullanıcıyı görüntülü görüşmeye bağlamaktadır. Room ID, URL parametresi olarak iframe'e iletilmektedir.
+
+2.12. Kod Organizasyonu ve Modüler Yapı
+
+2.12.1. Backend Modüler Yapı
+
+Backend kodu, modüler yapıda organize edilmiştir. auth_api.py ana Flask uygulaması ve API endpoint'leri, utils/errors.py özel exception sınıfları, utils/validators.py input validation fonksiyonları, utils/helpers.py yardımcı fonksiyonlar.
+
+2.12.2. Frontend Kod Organizasyonu
+
+Frontend kodu, analyze.html içinde modüler fonksiyonlar olarak organize edilmiştir. Firebase başlatma, model yükleme, analiz işlemleri ve UI güncelleme fonksiyonları ayrılmıştır. Her fonksiyon, belirli bir sorumluluğa sahiptir.
+
+2.12.3. Utility Fonksiyonları ve Helper Modüller
+
+Helper modüller, ortak işlevleri merkezi olarak yönetmektedir. serialize_firestore_timestamp timestamp serileştirme, sanitize_string string temizleme, get_user_id_from_token token'dan user ID çıkarma.
+
+2.12.4. Error Handling ve Validation Modülleri
+
+Error handling, utils/errors.py modülünde özel exception sınıfları ile yönetilmektedir. Validation, utils/validators.py modülünde merkezi olarak yapılmaktadır. Flask error handler'ları ile tutarlı hata yanıtları sağlanmaktadır.
+

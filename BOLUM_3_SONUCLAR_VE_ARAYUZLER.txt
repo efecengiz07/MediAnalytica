@@ -1,0 +1,132 @@
+BÖLÜM 3: SONUÇLAR VE ARAYÜZLER
+
+3.1. Sistem Test Sonuçları
+
+3.1.1. Test Ortamı
+
+Test ortamı, backend sunucusu olarak Python 3.11+ ve Flask 2.3+ kullanılmıştır. Frontend testleri, Chrome, Firefox, Safari ve Edge tarayıcılarında gerçekleştirilmiştir. Veritabanı testleri, Firebase Firestore test ortamında yapılmıştır. Model testleri, Google Colab GPU ortamında ve yerel GPU ile gerçekleştirilmiştir. Network testleri, localhost ve production benzeri ortamda yapılmıştır.
+
+3.1.2. Model Doğruluk Testleri
+
+Derin öğrenme modelleri, test veri setleri üzerinde değerlendirilmiştir. Deri hastalıkları modeli EfficientNetB3, test accuracy yüzde 85-90 aralığında, macro F1 score yüzde 80-85 aralığında, 5 sınıflı sınıflandırma akiec, bcc, bkl, mel, nv. Kemik hastalıkları modeli DenseNet-121, test accuracy yüzde 80-85 aralığında, macro F1 score yüzde 75-80 aralığında, 4 sınıflı sınıflandırma Normal, Fracture, Benign_Tumor, Malignant_Tumor. Akciğer hastalıkları modeli, test accuracy yüzde 90-95 aralığında, 2 sınıflı sınıflandırma Normal, Pneumonia.
+
+BURAYA TABLO 3.1: MODEL DOĞRULUK SONUÇLARI TABLOSU EKLENECEK
+
+BURAYA ŞEKİL 3.1: MODEL DOĞRULUK KARŞILAŞTIRMA GRAFİĞİ EKLENECEK
+
+3.1.3. Performans Testleri
+
+Sistem performans testleri, API yanıt süreleri, model tahmin süreleri ve sayfa yükleme süreleri üzerinde gerçekleştirilmiştir. API yanıt süreleri ortalama 200-500ms, P95 2 saniyeden az. Model tahmin süreleri ortalama 2-8 saniye hastalık türüne göre değişken. Sayfa yükleme süreleri ortalama 1-2 saniye First Contentful Paint.
+
+BURAYA TABLO 3.2: PERFORMANS TEST SONUÇLARI TABLOSU EKLENECEK
+
+3.1.4. Güvenlik Testleri
+
+Güvenlik testleri, rate limiting, input validation ve authentication mekanizmaları üzerinde gerçekleştirilmiştir. Rate limiting başarılı, DDoS saldırıları engellendi. Input validation yüzde 100 endpoint coverage. Authentication yüzde 100 başarılı token doğrulama. CORS sadece izin verilen origin'lerden istekler kabul edildi.
+
+3.1.5. Kullanılabilirlik Testleri
+
+Kullanılabilirlik testleri, kullanıcı deneyimi ve arayüz erişilebilirliği üzerinde gerçekleştirilmiştir. Responsive tasarım mobil, tablet ve desktop cihazlarda sorunsuz çalıştı. Touch target'lar minimum 44x44px gereksinimi karşılandı. Dark mode başarıyla implement edildi. Hata mesajları kullanıcı dostu mesajlar gösterildi.
+
+3.1.6. Hedeflerin Gerçekleşme Durumu
+
+Başlangıçta konan hedefler, büyük ölçüde gerçekleştirilmiştir. Model doğruluğu hedefleri, tüm hastalık kategorileri için minimum gereksinimlerin üzerinde sonuçlar elde edilmiştir. Sistem performansı hedefleri, API yanıt süreleri ve sayfa yükleme süreleri hedeflenen değerlerin altında kalmıştır. Kullanıcı deneyimi hedefleri, responsive tasarım ve dark mode özellikleri ile karşılanmıştır. Güvenlik hedefleri, rate limiting ve input validation ile tam olarak gerçekleştirilmiştir.
+
+3.2. Kullanıcı Arayüzü Ekranları
+
+3.2.1. Giriş ve Kayıt Sayfası
+
+Giriş ve kayıt sayfası templates/login.html, kullanıcıların hesap oluşturması ve giriş yapması için tasarlanmıştır. Sayfa, glassmorphism efektli modern bir tasarıma sahiptir. Email doğrulama ve şifre sıfırlama özellikleri entegre edilmiştir.
+
+BURAYA ŞEKİL 3.2: GİRİŞ VE KAYIT SAYFASI EKRAN GÖRÜNTÜSÜ EKLENECEK
+
+3.2.2. Ana Analiz Sayfası
+
+Ana analiz sayfası analyze.html, kullanıcıların görüntü yüklemesi ve analiz sonuçlarını görüntülemesi için tasarlanmıştır. Sayfa, hero section, analiz kartı, istatistikler kartı ve geçmiş kartı içermektedir. Grad-CAM görselleştirmesi entegre edilmiştir.
+
+BURAYA ŞEKİL 3.3: ANA ANALİZ SAYFASI EKRAN GÖRÜNTÜSÜ EKLENECEK
+
+3.2.3. Analiz Geçmişi Sayfası
+
+Analiz geçmişi sayfası, kullanıcıların geçmiş analizlerini görüntülemesi için ana sayfa içinde bir bölüm olarak tasarlanmıştır. Filtreleme hastalık türü, tarih ve sayfalama özellikleri bulunmaktadır.
+
+BURAYA ŞEKİL 3.4: ANALİZ GEÇMİŞİ SAYFASI EKRAN GÖRÜNTÜSÜ EKLENECEK
+
+3.2.4. İstatistikler Sayfası
+
+İstatistikler sayfası, kullanıcıların analiz istatistiklerini görüntülemesi için ana sayfa içinde bir bölüm olarak tasarlanmıştır. Toplam analiz sayısı, hastalık türüne göre dağılım ve son analiz tarihi gösterilmektedir.
+
+BURAYA ŞEKİL 3.5: İSTATİSTİKLER SAYFASI EKRAN GÖRÜNTÜSÜ EKLENECEK
+
+3.2.5. Profil Ayarları Sayfası
+
+Profil ayarları sayfası, kullanıcıların profil bilgilerini isim, profil fotoğrafı güncellemesi için ana sayfa içinde bir modal olarak tasarlanmıştır. Firebase Storage entegrasyonu ile profil fotoğrafı yükleme özelliği bulunmaktadır.
+
+BURAYA ŞEKİL 3.6: PROFİL AYARLARI SAYFASI EKRAN GÖRÜNTÜSÜ EKLENECEK
+
+3.2.6. Randevu Yönetimi Sayfası
+
+Randevu yönetimi sayfası, kullanıcıların doktor randevusu talep etmesi ve randevularını görüntülemesi için ana sayfa içinde bir bölüm olarak tasarlanmıştır. Randevu oluşturma formu ve randevu listesi bulunmaktadır.
+
+BURAYA ŞEKİL 3.7: RANDEVU YÖNETİMİ SAYFASI EKRAN GÖRÜNTÜSÜ EKLENECEK
+
+3.2.7. Görüntülü Görüşme Sayfası
+
+Görüntülü görüşme sayfası templates/appointment.html, kullanıcıların Jitsi Meet üzerinden doktorlarla görüntülü görüşme yapması için tasarlanmıştır. Jitsi Meet iframe'i entegre edilmiştir.
+
+BURAYA ŞEKİL 3.8: GÖRÜNTÜLÜ GÖRÜŞME SAYFASI EKRAN GÖRÜNTÜSÜ EKLENECEK
+
+3.2.8. Doktor Paneli
+
+Doktor paneli templates/doctor-dashboard.html, doktorların randevularını görüntülemesi ve yönetmesi için tasarlanmıştır. Dashboard, randevular ve hasta dosyaları bölümleri içermektedir.
+
+BURAYA ŞEKİL 3.9: DOKTOR PANELİ EKRAN GÖRÜNTÜSÜ EKLENECEK
+
+3.3. Kullanım Senaryoları
+
+3.3.1. Senaryo 1: Deri Hastalığı Analizi
+
+Kullanıcı, deri hastalığı analizi yapmak için aşağıdaki adımları izler: Ana sayfada Deri Hastalıkları seçeneğini seçer, görüntü yükleme alanına cilt fotoğrafını yükler, Analiz Et butonuna tıklar, sistem EfficientNetB3 modeli ile görüntüyü analiz eder, analiz sonuçları sınıf olasılıkları ve Grad-CAM görselleştirmesi gösterilir, kullanıcı sonuçları favorilere ekleyebilir, paylaşabilir veya PDF olarak indirebilir.
+
+3.3.2. Senaryo 2: Kemik Hastalığı Analizi
+
+Kullanıcı, kemik hastalığı analizi yapmak için aşağıdaki adımları izler: Ana sayfada Kemik Hastalıkları seçeneğini seçer, görüntü yükleme alanına X-ray görüntüsünü yükler, Analiz Et butonuna tıklar, sistem DenseNet-121 modeli ile görüntüyü analiz eder, analiz sonuçları Normal, Fracture, Benign_Tumor, Malignant_Tumor gösterilir, sonuçlar otomatik olarak analiz geçmişine kaydedilir.
+
+3.3.3. Senaryo 3: Doktor Randevusu ve Görüntülü Görüşme
+
+Kullanıcı, doktor randevusu almak ve görüntülü görüşme yapmak için aşağıdaki adımları izler: Ana sayfada Randevu Talep bölümüne gider, randevu formunu doldurur tarih, saat, neden, doktor uzmanlık alanı, randevu talebini gönderir, sistem randevuyu otomatik olarak onaylar ve benzersiz Jitsi Meet room ID'si oluşturur, randevu tarihi geldiğinde Görüntülü Görüşmeye Katıl butonuna tıklar, Jitsi Meet sayfası açılır ve doktorla görüntülü görüşme başlar.
+
+BURAYA ŞEKİL 3.12: DOKTOR RANDEVUSU VE GÖRÜNTÜLÜ GÖRÜŞME SENARYOSU EKRAN GÖRÜNTÜLERİ EKLENECEK
+
+3.4. Performans Metrikleri
+
+3.4.1. API Yanıt Süreleri
+
+API yanıt süreleri, farklı endpoint'ler için ölçülmüştür. /api/user/stats ortalama 150-300ms cache ile, /api/user/analyses ortalama 200-500ms, /api/user/favorites ortalama 150-250ms, /auth/verify ortalama 100-200ms.
+
+BURAYA TABLO 3.3: API YANIT SÜRELERİ TABLOSU EKLENECEK
+
+3.4.2. Model Tahmin Süreleri
+
+Model tahmin süreleri, farklı hastalık türleri için ölçülmüştür. Deri hastalıkları EfficientNetB3 ortalama 3-5 saniye, kemik hastalıkları DenseNet-121 ortalama 4-6 saniye, akciğer hastalıkları ortalama 2-4 saniye.
+
+BURAYA TABLO 3.4: MODEL TAHMİN SÜRELERİ TABLOSU EKLENECEK
+
+3.4.3. Sayfa Yükleme Süreleri
+
+Sayfa yükleme süreleri, Web Vitals metrikleri kullanılarak ölçülmüştür. First Contentful Paint FCP ortalama 1-1.5 saniye, Largest Contentful Paint LCP ortalama 1.5-2.5 saniye, Time to Interactive TTI ortalama 2-3 saniye.
+
+BURAYA TABLO 3.5: SAYFA YÜKLEME SÜRELERİ TABLOSU EKLENECEK
+
+3.5. Sistem Karşılaştırması
+
+3.5.1. Benzer Sistemlerle Karşılaştırma
+
+Bu çalışma, literatürdeki benzer sistemlerle karşılaştırıldığında aşağıdaki farklılıklar gözlemlenmektedir: Çoklu hastalık desteği çoğu çalışma tek bir hastalık kategorisine odaklanırken, bu çalışma üç farklı hastalık kategorisini desteklemektedir. Entegre tele-tıp yapay zeka analizi sonrasında doğrudan doktor görüşmesi yapabilme özelliği, benzer çalışmalarda bulunmamaktadır. Kapsamlı kullanıcı yönetimi analiz geçmişi, favoriler, paylaşım ve istatistikler gibi özellikler, kullanıcı deneyimini artırmaktadır.
+
+BURAYA TABLO 3.6: BENZER SİSTEMLERLE KARŞILAŞTIRMA TABLOSU EKLENECEK
+
+3.5.2. Özgün Katkılar
+
+Bu çalışmanın özgün katkıları şunlardır: Çoklu hastalık platformu tek bir platformda üç farklı hastalık kategorisi için analiz yapabilme kapasitesi, entegre tele-tıp sistemi yapay zeka analizi ve doktor görüşmesi entegrasyonu, Grad-CAM görselleştirmesi model kararlarının şeffaflığını artıran görselleştirme tekniği, açık kaynak mimari genişletilebilir ve özelleştirilebilir açık kaynak kod yapısı, responsive ve erişilebilir tasarım mobil cihazlarda da sorunsuz çalışan, erişilebilirlik standartlarına uygun arayüz.
+

@@ -1,0 +1,18 @@
+BÖLÜM 4: TARTIŞMA
+
+4.1. Ürünün Avantajları
+
+Platform, çoklu hastalık kategorisi desteği ile kullanıcıların farklı hastalıklar için ayrı platformlar kullanması gerekliliğini ortadan kaldırmaktadır. Entegre tele-tıp sistemi, yapay zeka analizi sonrasında kullanıcıların doğrudan uzman doktorlarla görüntülü görüşme yapabilmesini sağlamaktadır. Grad-CAM görselleştirmesi, model kararlarının şeffaflığını artırarak kullanıcıların ve doktorların modelin hangi bölgelere odaklandığını görmesini mümkün kılmaktadır. Kapsamlı kullanıcı yönetimi özellikleri analiz geçmişi, favoriler, paylaşım ve istatistikler, kullanıcıların sağlık verilerini takip edebilmesini sağlamaktadır. Açık kaynak ve genişletilebilir mimari, yeni hastalık kategorileri ve özelliklerin kolayca eklenebilmesine olanak sağlamaktadır. Responsive ve erişilebilir tasarım, mobil cihazlarda da sorunsuz çalışan, erişilebilirlik standartlarına uygun bir arayüz sunmaktadır.
+
+4.2. Ürünün Dezavantajları
+
+Platform, gerçek hasta verileri yerine açık kaynak veri setleri kullanılarak eğitilmiş modellere dayanmaktadır. Bu durum, gerçek dünya senaryolarında model performansının farklılık gösterebileceği anlamına gelmektedir. Firebase ücretsiz planının kısıtları, depolama ve veritabanı işlemleri için günlük limitler getirmektedir. Model tahmin süreleri, özellikle büyük görüntüler için 10 saniyeye kadar çıkabilmektedir. Platform, sadece görüntü tabanlı analiz yapabilmekte, laboratuvar sonuçları veya hasta geçmişi gibi ek bilgileri değerlendirememektedir. Doktor randevu sistemi, test amaçlı otomatik onaylama yapmakta, gerçek bir doktor onay mekanizması bulunmamaktadır. Email doğrulama zorunluluğu, bazı kullanıcılar için ek bir adım oluşturmaktadır.
+
+4.3. Yöntemsel Başarısızlıklar ve Nedenleri
+
+Göz hastalıkları kategorisi, proje kapsamından çıkarılmıştır. Bunun nedeni, veri seti kalitesi ve model eğitim sürecinde karşılaşılan zorluklardır. Model eğitim sürecinde, bazı hastalık kategorileri için sınırlı veri seti nedeniyle overfitting problemi yaşanmıştır. Bu durum, veri artırma tekniklerinin daha agresif uygulanması ile çözülmeye çalışılmıştır. Backend API'lerinde, bazı endpoint'lerde pagination implementasyonu cursor-based yerine offset-based olarak yapılmıştır. Bu durum, büyük veri setlerinde performans sorunlarına yol açabilmektedir. Frontend'de, bazı tarayıcılarda ES6+ özelliklerinin desteklenmemesi nedeniyle polyfill kullanımı gerekmiştir. Test coverage, hedeflenen yüzde 60 seviyesine ulaşamamıştır. Bunun nedeni, zaman kısıtı ve test yazımı için ayrılan sürenin yetersizliğidir.
+
+4.4. Gelecek Çalışmalar ve İyileştirme Önerileri
+
+Gelecek çalışmalarda, gerçek hasta verileri ile model eğitimi yapılması ve model performansının gerçek dünya senaryolarında değerlendirilmesi önerilmektedir. Göz hastalıkları kategorisinin tekrar eklenmesi ve model eğitim sürecinin iyileştirilmesi planlanmaktadır. Doktor randevu sistemi, gerçek bir doktor onay mekanizması ile güncellenmelidir. Model tahmin sürelerinin azaltılması için model optimizasyonu ve quantization teknikleri uygulanabilir. Cursor-based pagination implementasyonu, büyük veri setlerinde performans iyileştirmesi sağlayacaktır. Test coverage'ın artırılması ve otomatik test süreçlerinin kurulması önerilmektedir. Mobil uygulama geliştirme, kullanıcı erişilebilirliğini artıracaktır. Çoklu dil desteği, platformun daha geniş bir kullanıcı kitlesine ulaşmasını sağlayacaktır. Gerçek zamanlı bildirim sistemi, kullanıcı deneyimini iyileştirecektir. Model ensemble teknikleri, model doğruluğunu artırabilir.
+

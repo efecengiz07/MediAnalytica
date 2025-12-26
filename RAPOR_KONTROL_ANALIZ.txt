@@ -1,0 +1,105 @@
+RAPOR KONTROL ANALİZİ - BULGULAR VE ÖNERİLER
+
+✅ İYİ OLAN NOKTALAR:
+
+1. Yapı ve Organizasyon:
+   - Tüm zorunlu bölümler mevcut (Öz, Abstract, Giriş, Araçlar ve Yöntemler, Sonuçlar, Tartışma, Kaynaklar)
+   - İçindekiler tablosu eksiksiz
+   - Bölüm numaralandırması doğru
+
+2. Akademik Dil:
+   - Birinci tekil şahıs (ben, biz) kullanılmamış ✅
+   - Edilgen yapı kullanılmış ✅
+   - Teknik terimler Türkçe, İngilizce parantez içinde ✅
+
+3. Öz ve Abstract:
+   - 10 cümle limitine uygun (8 cümle) ✅
+   - Abstract, Öz'ün tam çevirisi ✅
+   - Motivasyon, Amaç, Plan, Sonuç içerikleri mevcut ✅
+
+4. Kaynak Gösterimi:
+   - Metin içinde kaynak referansları var (Esteva ve arkadaşları 2017, vb.) ✅
+   - Kaynaklar bölümü numaralı sistem ile düzenlenmiş ✅
+   - Web kaynakları için son erişim tarihi var ✅
+
+5. Şekil ve Tablo Referansları:
+   - Metin içinde şekil/tablo numaraları ile referans verilmiş ✅
+   - Şekil/tablo notları mevcut ✅
+
+6. Tutarlılık:
+   - Göz hastalıkları kaldırılmış, tüm raporda tutarlı ✅
+   - Hastalık sayısı üç olarak belirtilmiş (deri, kemik, akciğer) ✅
+
+⚠️ DÜZELTİLMESİ GEREKEN NOKTALAR:
+
+1. Bölüm 1.4 - Başlık Yapısı:
+   - "1.4. Kısıtlar ve Başarı Ölçütleri" başlığı var
+   - "1.4.1. Kısıtlar" alt başlığı var
+   - Ancak "Başarı Ölçütleri" için ayrı bir alt başlık (1.4.2) yok
+   - ÖNERİ: "1.4.2. Başarı Ölçütleri" alt başlığı eklenmeli
+
+2. Bölüm 1.5 - Proje Planı:
+   - Fazlar listelenmiş ama başlık yapısı düzensiz
+   - ÖNERİ: Her faz için alt başlık kullanılabilir (1.5.1, 1.5.2, vb.) veya mevcut format korunabilir
+
+3. Denklem Formatı:
+   - Accuracy = True Positives + True Negatives / Total Samples
+   - Bu denklemde parantez eksik: (True Positives + True Negatives) / Total Samples olmalı
+   - ÖNERİ: Denklem düzeltilmeli
+
+4. Bazı Uzun Cümleler:
+   - Bölüm 1.1'de bazı cümleler çok uzun
+   - ÖNERİ: Uzun cümleler bölünebilir (zorunlu değil, stil tercihi)
+
+5. Şekil/Tablo Numaralandırması:
+   - Şekil 1.2, 1.3, 2.1, 2.2, vb. numaralandırma doğru ✅
+   - Ancak bazı şekiller eksik numaralı (örn: Şekil 3.10, 3.11 yok, direkt 3.12 var)
+   - ÖNERİ: Şekil numaraları kontrol edilmeli, sıralı olmalı
+
+6. Bölüm 2.4.1 - Şekil Referansı:
+   - "BURAYA ŞEKİL 2.1: SİSTEM GENEL MİMARİ DİYAGRAMI EKLENECEK" yazıyor
+   - Ancak Bölüm 1.7'de de "BURAYA ŞEKİL 1.2: SİSTEM MİMARİSİ DİYAGRAMI EKLENECEK" var
+   - ÖNERİ: Aynı şekil iki yerde referans verilmiş olabilir, kontrol edilmeli
+
+7. Kaynak Numaralandırması:
+   - Metin içinde [1], [2] gibi referanslar yok
+   - Sadece "Esteva ve arkadaşları (2017)" şeklinde yazılmış
+   - ÖNERİ: Akademik standartlara göre [1], [2] formatı da kullanılabilir (zorunlu değil, kurum tercihine bağlı)
+
+8. Bölüm 3.1.6 - Hedeflerin Gerçekleşme Durumu:
+   - "Hedeflerin Gerçekleşme Durumu" başlığı var
+   - Ancak Bölüm 1.4'te "Başarı Ölçütleri" var
+   - ÖNERİ: Bu iki bölüm arasında bağlantı kurulabilir, "Bölüm 1.4'te belirtilen başarı ölçütlerine göre..." gibi
+
+9. Sayfa Numaraları:
+   - İçindekiler tablosunda sayfa numaraları yok
+   - ÖNERİ: Word'de otomatik olarak eklenir, manuel eklemeye gerek yok ✅
+
+10. Format Tutarlılığı:
+    - Bazı yerlerde noktalama işaretleri tutarsız (virgül, nokta)
+    - ÖNERİ: Word'de "Bul ve Değiştir" ile düzeltilebilir
+
+📝 ÖNERİLER:
+
+1. Bölüm 1.4.2 eklenmeli: "1.4.2. Başarı Ölçütleri"
+
+2. Denklem düzeltilmeli:
+   Accuracy = (True Positives + True Negatives) / Total Samples
+
+3. Şekil numaraları kontrol edilmeli (sıralı olmalı)
+
+4. Bölüm 3.1.6'da Bölüm 1.4'e referans verilebilir
+
+5. Word'de otomatik içindekiler tablosu oluşturulmalı (sayfa numaraları için)
+
+6. Son kontrol: Tüm şekil ve tabloların metin içinde referans verildiğinden emin olunmalı
+
+GENEL DEĞERLENDİRME:
+
+Rapor genel olarak çok iyi durumda. Akademik standartlara uygun, yapı eksiksiz, içerik kapsamlı. Yukarıdaki küçük düzeltmeler yapıldığında rapor tamamen hazır olacaktır.
+
+ÖNCELİKLİ DÜZELTMELER:
+1. Bölüm 1.4.2 başlığı eklenmeli
+2. Denklem parantezleri düzeltilmeli
+3. Şekil numaraları kontrol edilmeli
+

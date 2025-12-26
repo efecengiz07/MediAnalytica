@@ -1,0 +1,42 @@
+KAYNAKLAR
+
+[1] Esteva, A., Kuprel, B., Novoa, R. A., Ko, J., Swetter, S. M., Blau, H. M., & Thrun, S. (2017). Dermatologist-level classification of skin cancer with deep neural networks. Nature, 542(7639), 115-118.
+
+[2] Haenssle, H. A., Fink, C., Schneiderbauer, R., Toberer, F., Buhl, T., Blum, A., ... & Reader Study Level I and Level II Groups. (2018). Man against machine: diagnostic performance of a deep learning convolutional neural network for dermoscopic melanoma recognition in comparison to 58 dermatologists. Annals of oncology, 29(8), 1836-1841.
+
+[3] Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., ... & Ng, A. Y. (2017). CheXNet: Radiologist-level pneumonia detection on chest X-rays with deep learning. arXiv preprint arXiv:1711.05225.
+
+[4] Gale, W., Oakden-Rayner, L., Carneiro, G., Bradley, A. P., & Palmer, L. J. (2019). Detecting hip fractures with radiologist-level performance using deep neural networks. arXiv preprint arXiv:1711.06504.
+
+[5] Li, X., Hu, X., Yu, L., Zhu, L., Fu, C. W., & Heng, P. A. (2020). CANet: Cross-disease attention network for joint diabetic retinopathy and diabetic macular edema grading. IEEE transactions on medical imaging, 39(5), 1483-1493.
+
+[6] Tan, M., & Le, Q. (2019). Efficientnet: Rethinking model scaling for convolutional neural networks. In International conference on machine learning (pp. 6105-6114).
+
+[7] Huang, G., Liu, Z., Van Der Maaten, L., & Weinberger, K. Q. (2017). Densely connected convolutional networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 4700-4708).
+
+[8] Selvaraju, R. R., Cogswell, M., Das, A., Vedantam, R., Parikh, D., & Batra, D. (2017). Grad-cam: Visual explanations from deep networks via gradient-based localization. In Proceedings of the IEEE international conference on computer vision (pp. 618-626).
+
+[9] Flask Documentation. (2024). Flask Web Framework. https://flask.palletsprojects.com/ (Son erişim: 2024)
+
+[10] Firebase Documentation. (2024). Firebase Authentication, Firestore, Storage. https://firebase.google.com/docs (Son erişim: 2024)
+
+[11] TensorFlow Documentation. (2024). TensorFlow and Keras API. https://www.tensorflow.org/api_docs (Son erişim: 2024)
+
+[12] Jitsi Meet Documentation. (2024). Jitsi Meet API. https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe (Son erişim: 2024)
+
+[13] Bootstrap Documentation. (2024). Bootstrap 4 Framework. https://getbootstrap.com/docs/4.6/ (Son erişim: 2024)
+
+[14] Font Awesome Documentation. (2024). Font Awesome Icons. https://fontawesome.com/ (Son erişim: 2024)
+
+[15] Python Software Foundation. (2024). Python Programming Language. https://www.python.org/ (Son erişim: 2024)
+
+[16] World Health Organization. (2020). Telemedicine: Opportunities and developments in Member States. WHO Global Observatory for eHealth.
+
+[17] ISIC Archive. (2024). International Skin Imaging Collaboration. https://www.isic-archive.com/ (Son erişim: 2024)
+
+[18] Mendeley Data. (2024). Medical Image Datasets. https://data.mendeley.com/ (Son erişim: 2024)
+
+[19] Kaggle. (2024). Medical Image Analysis Competitions. https://www.kaggle.com/ (Son erişim: 2024)
+
+[20] Web Content Accessibility Guidelines (WCAG) 2.1. (2018). W3C Recommendation. https://www.w3.org/TR/WCAG21/ (Son erişim: 2024)
+
